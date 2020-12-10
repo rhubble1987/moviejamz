@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Contact</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.5.2/css/bulma.css" rel="stylesheet"/> 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  </head>
+  <body>
+
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+          <a class="navbar-item" href="./index.html">
+            <img src="./assets/projecttitleicon.png" width="70" height="28">
+          </a>
+      
+          <a role="button" class="navbar-burger burger" onclick="document.querySelector('.navbar-menu').classList.toggle('is-active');" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+          </a>
+        </div>
+      
+        <div id="navbarBasicExample" class="navbar-menu">
+          <div class="navbar-start">
+      
+            <div class="navbar-item has-dropdown is-hoverable">
+              <a class="navbar-link">
+                Saved Jamz
+              </a>
+      
+              <div class="navbar-dropdown">
+                <a class="navbar-item" id="saved-track">
+                  
+                </a> 
+              </div>
+            </div>
+      
+            
+            <a class="navbar-item" href="./contact.html">
+              Contact
+            </a>
+            
+          </div>
+        </div>
+      </nav>
+    
+    <section class="hero">
+      <div class="hero-body has-text-centered">
+        <h1 class="title column is-mobile">
+          <img class="header " id="logo"  src="./assets/project logo.png"> <img src="./assets/icon1-2.png" height="100px" width="100px">
+        </h1>
+      </div>
+    </section>
+
+    <hr>
+
+    <section class="section">
+        <div id="movie-content" class="container">
+          <div class="columns">
+            <div class="column">
+              <div class="bd-notification">
+    
+                <img id="movie-poster" class="column" alt="">
+              </div>
+            </div>
+            <div class="column">
+                <div class="notification" id="info-column">
+                    <div class="notification is-dark has-text-centered">
+                    <p><b class="is-size-3">Contact Us</b> <span id="release-year"></span></p>
+                    </div>
+                    <div class="notification is-dark">
+                    
+                      <div class="field">
+                          <div class="control">
+                          <input class="input" type="text" placeholder="Name">
+                          </div>
+                      </div>
+
+                      <div class="field">
+                          <div class="control">
+                          <textarea class="textarea" placeholder="Message"></textarea>
+                          </div>
+                      </div>
+
+                      <label class="button is-primary is-medium" id="searchBtn">
+                        Submit
+                      </label>
+                    </div>
+                </div>  
+            </div>
+            <div class="column" >
+              
+            </div>
+          </div>
+        </div>
+      </section>
+
+    <footer class="footer">
+      <div class="container footer-item has-text-centered">
+        <div class="container  has-text-centered">
+          Share on <a href="facebook.com">Facebook</a>
+          Share on <a href="twitter.com">Twitter</a>
+        </div>
+        <p>
+          <strong>MovieJamz</strong> Powered by <a href="https://bulma.io//">Bulma</a>. The source code is licensed
+          <a href="http://opensource.org/licenses/mit-license.php">MIT</a>
+        </p>
+       
+      </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+  </body>
+</html>

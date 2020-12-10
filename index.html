@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>MovieJamz</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.5.2/css/bulma.css" rel="stylesheet"/> 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  </head>
+  <body>
+
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+      <div class="navbar-brand">
+        <a class="navbar-item" href="./index.html">
+          <img src="./assets/projecttitleicon.png" width="70" height="28">
+        </a>
+    
+        <a role="button" class="navbar-burger burger" onclick="document.querySelector('.navbar-menu').classList.toggle('is-active');" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+    
+      <div id="navbarBasicExample" class="navbar-menu">
+        <div class="navbar-start">
+
+    
+          <div class="navbar-item has-dropdown is-hoverable">
+            <a class="navbar-link">
+              Searched Moviez
+            </a>
+    
+            <div id="searched-songs" class="navbar-dropdown">
+              <p class="has-text-centered" id="no-saved-searches">No saved searches</p>
+            </div>
+          </div>
+              
+          <div class="navbar-item has-dropdown is-hoverable">
+            <a class="navbar-link">
+              Saved Jamz
+            </a>
+    
+            <div id="saved-songs" class="navbar-dropdown">
+             <p class="has-text-centered" id="no-saved-songs">No saved jamz</p>
+            </div>
+          </div>
+              
+          </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    
+    <section class="hero">
+      <div class="hero-body has-text-centered">
+        <h1 class="title column is-mobile">
+          <img class="header " id="logo"  src="./assets/project logo.png"> <img src="./assets/icon1-2.png" height="100px" width="100px">
+        </h1>
+      </div>
+    </section>
+
+    <hr>
+
+    <section class="container columns is-fluid ">
+      <div class = "container">
+        <div class = "notification is-dark has-text-centered">
+          Ever watched a movie and heard a great song but never knew what it was, then after tons of web searching you eventually just gave up?
+          <p>Well MovieJamz is here to help! Just put any moive in the search bar and we will find the hit songs for you.</p>
+        </div> 
+      </div>
+    </section>
+
+    <section class="columns is-mobile is-centered">
+     <div class="field has-addons">
+        <div class="control column">
+          <input class="input is-large" id="searchBar" type="text">
+          <div class="select">
+            <select id="movie-year">
+              <option>Select Year (optional)</option>
+            </select>
+          </div>
+        </div>
+        <form class="control column" id="movie-form">
+          <label class="button is-dark is-large" id="searchBtn">
+            Search
+          </label>
+        </form>
+      </div>
+       
+    </section>
+
+    
+  <section class="section">
+    <div id="movie-content" class="container" style="display: none;">
+      <div class="columns">
+        <div class="column">
+          <div class="bd-notification">
+
+            <img id="movie-poster" src="http://placehold.it/350x550" class="column" alt="">
+          </div>
+        </div>
+        <div class="column">
+          <div class="notification" id="movie-info">
+            <div class="notification is-dark has-text-centered">
+              <h1 id="movie-title" class="movietitle has-text-weight-bold is-size-3"></h1>
+              <p><b>Release Year:</b> <span id="release-year"></span></p>
+            </div>
+            <div class="notification is-dark"><p><b>Composer:</b> <span id="composer"></span></p></div>
+            <div class="notification is-dark"><p><b>Starring:</b> <span id="starring"></span></p></div>
+            <div class="notification is-dark"><p><b>Director:</b> <span id="director"></span></p></div>
+          </div>  
+        </div>
+        <div class="column">
+          <div class="notification">
+            <div id="soundtrack" class="soundtracklist has-text-left">
+
+              <li style="display: none;" class="track" ><p><a href="#" target="_blank" id="track-name"></a>  <button class="button is-small" id="saveSongBtn">Save</button></p></li>
+
+
+
+            </div>
+          </div>  
+        </div>
+      </div>
+    </div>
+  </section>
+    <footer class="footer">
+      <div class="container footer-item has-text-centered">
+       <!--<div class="container  has-text-centered">
+          Share on <a href="facebook.com">Facebook</a>
+          Share on <a href="twitter.com">Twitter</a>
+        </div>-->
+        <p>
+          <strong>MovieJamz</strong> Powered by <a href="https://bulma.io//">Bulma</a>. The source code is licensed
+          <a href="http://opensource.org/licenses/mit-license.php">MIT</a>
+        </p>
+       
+      </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+    <script type="text/javascript" src="imdb_call.js"></script>
+  </body>
+</html>
